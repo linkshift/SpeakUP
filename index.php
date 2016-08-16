@@ -7,7 +7,7 @@ session_name("speakup_session");
 require('../default/scripts/engine/config.php');
 require('../default/scripts/engine/functions.php');
 
-$version = "1.8.12.1";
+$version = "1.8.12.2";
 # define("DEBUG", 1);
 
 class CodeGen {
