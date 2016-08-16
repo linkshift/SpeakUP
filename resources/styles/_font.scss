@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+.icon {
+	fill: #fff;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-dark {
+	fill: #333;
+}
+
+.icon-fw {
+	width: 1.3em;
+	height: 1.3em;
+	text-align: center;
+}
+
+.icon-lg {
+	width: 1.5em;
+	height: 1.5em;
+	line-height: .75em;
+	vertical-align: -15%;
+}
+
+.icon-xl {
+	width: 2.5em;
+	height: 2.5em;
+	line-height: 1em;
+	vertical-align: -15%;
+}

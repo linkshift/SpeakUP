@@ -1,0 +1,12 @@
+client/
+resources/cache/
+resources/text/
+resources/styles/*.css
+resources/scripts/compiled.js
+resources/scripts/compiled.js.map
+build.sh
+build.php
+.sass-cache
+logger.php
+session.php
+contacts.php

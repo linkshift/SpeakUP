@@ -1,0 +1,101 @@
+<div id='call-backdrop'></div>
+<div id='call-window' class='no-select'>
+	<div style='text-align:center'>
+		<img class='img-circle' src='' id='call-avatar'>
+	</div>
+	<div>
+		<h4 class='media-heading' id='call-name'></h4>
+		<h5 id='call-text'></h5>
+		<div class='btn-group btn-group-justified' id='call-controls-incoming'>
+			<div class='btn-group'>
+				<button id='call-accept' class='btn btn-success'>Accept</button>
+			</div>
+			<div class='btn-group'>
+				<button id='call-reject' class='btn btn-danger'>Reject</button>
+			</div>
+		</div>
+		
+		<div class='btn-group btn-group-justified' id='call-controls-outgoing'>
+			<div class='btn-group'>
+				<button id='call-cancel' class='btn btn-danger'>Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id='documentsWindow' class='modal'>
+	<div id='documents-inner'>
+		<div id='document-text'></div>
+		<div id='document-control'>
+			<button class='btn' id='document-close'>Close</button>
+		</div>
+	</div>
+</div>
+
+<div id='preferencesWindow' class='modal'>
+	<h3 class='modal-title'>Preferences</h3>
+	<div class='modal-inner'>
+		<div class='modal-tabs'>
+			<div class='modal-tab' data-target='#prefFrmMedia'>Multimedia</div>
+			<div class='modal-tab' data-target='#prefFrmApp'>Application</div>
+			<div class='modal-tab' data-target='#prefFrmShare'>Share</div>
+			<div class='modal-tab' data-target='#prefFrmAbout'>About</div>
+		</div>
+		<form id='prefFrmMedia' class='modal-tab-content'>
+			<div class='row'>
+				<div><label for='audioDeviceSelector'>Microphone </label></div>
+				<div><select id='audioDeviceSelector'></select></div>
+			</div>
+			<div class='row'>
+				<div><label for='sliderVolume'>Playback Volume </label></div>
+				<div><input type='range' min='0' max='1' step='0.05' id='sliderVolume' class='trackbar' /></div>
+			</div>
+			<div class='row'>
+				<div><label for='videoDeviceSelector'>Camera </label></div>
+				<div><select id='videoDeviceSelector'></select></div>
+			</div>
+			<div class='row'>
+				<div><label><input type='checkbox' id='videoDeviceQuality'/>Prefer HD video</label></div>
+			</div>
+		</form>
+		
+		<form id='prefFrmApp' class='modal-tab-content'>
+			<div class='row'>
+				<div><label for='inputPrefsNickname'>Your Nickname </label></div>
+				<div><input type='text' id='inputPrefsNickname' /></div>
+			</div>
+			<div class='row'>
+				<div><label><input type='checkbox' id='confirmClose'/>Show confirmation on closing</label></div>
+			</div>
+			<div class='row' id='boxMiniMode'>
+				<div><label><input type='checkbox' id='enableMiniMode'/>Show mini window during call</label></div>
+			</div>
+		</form>
+		
+		<form id='prefFrmShare' class='modal-tab-content'>
+			<div class='row'>
+				<div><label for='shareRoomLink'>Room Link</label></div>
+				<div><input type='text' id='shareRoomLink' value='' readonly /></div>
+			</div>
+		</form>
+		
+		<form id='prefFrmAbout' class='modal-tab-content'>
+			<p id='prefsAboutTitle'>SpeakUP</p>
+			<p>Created by <a href='https://ptdev.pw/' target='_blank'>LinkShift</a>. Project is available on <a href='https://github.com/linkshift/SpeakUP' target='_blank'>GitHub</a>.</p>
+			<p>3-rd party resources:
+				<ul>
+					<li><a href='https://simplewebrtc.com/' target='_blank' rel='nofollow'>SimpleWebRTC.js from &amp;yet</a></li>
+					<li><a href='http://www.svgeneration.com/' target='_blank' rel='nofollow'>SVGeneration by DDKnoll</a></li>
+					<li>Standalone clients based on <a href='https://github.com/electron/electron' target='_blank' rel='nofollow'>electron</a></li>
+					<li>Icons by <a href='https://icomoon.io/app/' target='_blank' rel='nofollow'>IcoMoon App</a></li>
+					<li>PT Sans Font by <a href='https://fonts.google.com/specimen/PT+Sans' target='_blank' rel='nofollow'>Google Fonts</a> and <a href='http://www.paratype.com/public/' target='_blank' rel='nofollow'>ParaType</a></li>
+				</ul>
+			</p>
+		</form>
+	</div>
+	
+	<div class='row'>
+		<div><button id='prefsCancel' class='btn'>%svg:icon-cancel icon-dark% Cancel</button></div>
+		<div><button id='prefsSave' class='btn'>%svg:icon-ok icon-dark% Save</button></div>
+	</div>
+</div>

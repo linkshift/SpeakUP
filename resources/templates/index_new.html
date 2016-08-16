@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SpeakUP</title>
+		%template:index_meta%
+	</head>
+	<body class='noloader loading' data-version="%version%" data-static="%static%">
+		<!-- LOADING AND LOGIN SCREEN -->
+		<div id='loader' class='noselect'>
+			<div class='logo'></div>
+			<div class='spinner'>
+				<div class='bounce1'></div>
+				<div class='bounce2'></div>
+				<div class='bounce3'></div>
+			</div>
+		</div>
+		
+		<div class='login-main'>
+			<!-- FRIENDS -->
+			<div id='friends'>
+				<h3>Your Profile</h3>
+				<div id='user-profile' class='list-group'>
+					<a class='list-group-item list-group-item-success' onclick='return false;' href='javascript:'>%svg:icon-user% <span id='user-profile-login'>...</span></a>
+				</div>
+				<h3>Friends</h3>
+				<div id='friends-app'>
+				</div>
+			</div>
+			<!-- end: FRIENDS -->
+			
+			<!-- JOIN ROOM -->
+			<div id='loginWindow'>
+				<div class='logo'></div>
+				<form id='loginForm' class='modal'>
+					<div class='row' id='loginNickField'>
+						<div><label for='loginNick'>Nickname </label></div>
+						<div><input type='text' id='loginNick' placeholder='Nickname' required pattern='([a-zA-Z0-9\-_]{1,})'/></div>
+					</div>
+					<div class='row'>
+						<div><label for='loginRoom'>Room ID </label></div>
+						<div>
+							<input type='text' id='loginRoom' placeholder='Room ID' required pattern='([a-zA-Z0-9\-_]{1,})'/>
+							<ul id='loginRoomRecent'></ul>
+						</div>
+					</div>
+					<div class='row'>
+						<div>
+							<button id='loginSubmit' class='btn'>Let's Speak!</button>
+						</div>
+					</div>
+					<div class='row' id='msgUseLSA'>
+						<a href='https://ptdev.pw/scripts/speakup.php'>Login or Create Account</a>
+					</div>
+				</form>
+			</div>
+			<!-- end: JOIN ROOM -->
+		</div>
+		<!-- end: LOADING AND LOGIN SCREEN -->
+
+		<!-- MODAL WINDOWS -->
+		%template:index_modals%
+		
+		<div id='fatalError' class='modal'>
+			<h3 class='modal-title'>Fatal error</h3>
+			<div id='fatalErrorText'></div>
+			<button class='btn' id='fatalErrorSettings'>Settings</button>
+			<button class='btn' id='fatalErrorRetry'>Try again</button>
+		</div>
+		<!-- end: MODAL WINDOWS -->
+
+		<!-- BOTTOM BAR -->
+		<footer id='bottom-bar' class='noselect'>
+			<span id='download-client'>
+				Download Client for: 
+				<a href='/client/squirrel/SpeakUP_Setup.exe'>Windows</a> &bull; 
+				<a href='/client/SpeakUP-Client-Linux.tar.gz'>Linux</a>
+			</span>
+			<span id='bottom-documents'>
+				<a href='javascript:' class='documents-link' data-href='resources/text/tos.html'>Terms of Service</a> &bull; 
+				<a href='javascript:' class='documents-link' data-href='resources/text/privacy.html'>Privacy Policy</a> &bull; 
+				<a href='javascript:' class='documents-link' data-href='resources/text/cookies.html'>Information about Cookies</a>
+			</span>
+		</footer>
+		<!-- end: BOTTOM BAR -->
+
+		<!-- Fixes for NodeJS - Electron Integration -->
+		<script>
+			if (typeof require !== 'undefined') {
+				window.node = {};
+				window.node.require = require;
+				window.node.ipcRenderer = require('electron').ipcRenderer;
+
+				delete window.require;
+				delete window.exports;
+				delete window.module;
+			}
+			
+			%session%
+		</script>
+		<!-- end: Fixes for NodeJS - Electron Integration -->
+
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-9210291-5', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<!-- end: Google Analytics -->
+		
+		<!-- Piwik -->
+		<script type="text/javascript">
+		  var _paq = _paq || [];
+		  _paq.push(["setDomains", ["*.speakup.cf"]]);
+		  _paq.push(['trackPageView']);
+		  _paq.push(['enableLinkTracking']);
+		  (function() {
+			var u="https://stats.ptdev.pw/";
+			_paq.push(['setTrackerUrl', u+'piwik.php']);
+			_paq.push(['setSiteId', 2]);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		  })();
+		</script>
+		<noscript><p><img src="https://stats.ptdev.pw/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+		<!-- End Piwik Code -->
+
+		<!-- JS LIBS -->
+		<script src='%static%/node_modules/jquery/dist/jquery.min.js'></script>
+		%body%
+		<!-- end: JS LIBS -->
+	</body>
+</html>

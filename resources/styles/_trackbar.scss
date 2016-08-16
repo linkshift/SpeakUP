@@ -1,0 +1,89 @@
+/*
+	http://danielstern.ca/range.css/
+*/
+
+input[type=range].trackbar {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 10.5px 0;
+}
+input[type=range].trackbar:focus {
+  outline: none;
+}
+input[type=range].trackbar::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 11px;
+  cursor: pointer;
+  box-shadow: 0.2px 0.2px 0px #000000, 0px 0px 0.2px #0d0d0d;
+  background: #aaaaaa;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type=range].trackbar::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0.3px #670000, 0px 0px 0px #810000;
+  border: 0px solid #ff1e00;
+  height: 32px;
+  width: 15px;
+  border-radius: 3px;
+  background: #224466;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10.5px;
+}
+input[type=range].trackbar:focus::-webkit-slider-runnable-track {
+  background: #d0d0d0;
+}
+input[type=range].trackbar::-moz-range-track {
+  width: 100%;
+  height: 11px;
+  cursor: pointer;
+  box-shadow: 0.2px 0.2px 0px #000000, 0px 0px 0.2px #0d0d0d;
+  background: #aaaaaa;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type=range].trackbar::-moz-range-thumb {
+  box-shadow: 0px 0px 0.3px #670000, 0px 0px 0px #810000;
+  border: 0px solid #ff1e00;
+  height: 32px;
+  width: 15px;
+  border-radius: 3px;
+  background: #224466;
+  cursor: pointer;
+}
+input[type=range].trackbar::-ms-track {
+  width: 100%;
+  height: 11px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range].trackbar::-ms-fill-lower {
+  background: #848484;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0.2px 0.2px 0px #000000, 0px 0px 0.2px #0d0d0d;
+}
+input[type=range].trackbar::-ms-fill-upper {
+  background: #aaaaaa;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0.2px 0.2px 0px #000000, 0px 0px 0.2px #0d0d0d;
+}
+input[type=range].trackbar::-ms-thumb {
+  box-shadow: 0px 0px 0.3px #670000, 0px 0px 0px #810000;
+  border: 0px solid #ff1e00;
+  height: 32px;
+  width: 15px;
+  border-radius: 3px;
+  background: #224466;
+  cursor: pointer;
+  height: 11px;
+}
+input[type=range].trackbar:focus::-ms-fill-lower {
+  background: #aaaaaa;
+}
+input[type=range].trackbar:focus::-ms-fill-upper {
+  background: #d0d0d0;
+}
