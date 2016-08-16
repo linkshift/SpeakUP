@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /call/
 Disallow: /room/
+Disallow: /resources/
