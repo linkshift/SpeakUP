@@ -1,10 +1,10 @@
 # SpeakUP!
 ## General Info
 
-SpeakUP.cf allows you to create instant videoconference for up to 4 people.
+SpeakUP allows you to create instant videoconference for up to 4 people.
 It uses peer-2-peer connection between clients to transmit audio/video (WebRTC protocol).
 
-[Start videoconference](https://speakup.cf/)
+[Start videoconference](https://speakup.ptdev.pw/)
 &bull;
 [VK Page](https://vk.com/speakupcf)
 
