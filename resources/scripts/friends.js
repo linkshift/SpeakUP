@@ -389,7 +389,7 @@ function initFriendsApp() {
 		Friends.showWindow();
 	});
 
-	socket = io.connect('https://speakup.cf/', {
+	socket = io.connect('https://speakup.ptdev.pw/', {
 		"force new connection": true
 	});
 	

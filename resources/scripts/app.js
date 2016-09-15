@@ -937,7 +937,7 @@ function prepareCall() {
 		debug: false,
 		detectSpeakingEvents: true,
 		autoAdjustMic: true,
-		url: "https://speakup.cf/",
+		url: "https://speakup.ptdev.pw/",
 		nick: Config.nick,
 		media: mediaOptions,
 		socketio: {
